@@ -10,3 +10,20 @@ create table user(
 );
 
 insert into user (NAME, contactNumber , email , password , status , role) values('Admin', 1231231231 , 'admin@gmail.com', 'admin', 'true','admin');
+
+create table category(
+    id int not null auto_increment,
+    name varchar(255) not null,
+    primary key (id)
+);
+
+
+create table produdct(
+    id int not null auto_increment,
+    name varchar(255) not null,
+    categoryId integer not null,
+    description varchar(255),
+    price integer,
+    status varchar(20),
+    primary key (id)
+);
